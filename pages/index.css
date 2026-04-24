@@ -114,10 +114,9 @@ body {
 
 .header__footer {
   margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
   position: relative;
   z-index: 2;
 }
@@ -136,9 +135,11 @@ body {
 }
 
 .header__paragraph_align_right {
-  margin-left: auto;
-  text-align: right;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: end;
   white-space: nowrap;
+  text-align: right;
 }
 
 .recipes {
